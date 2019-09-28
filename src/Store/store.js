@@ -6,11 +6,7 @@ import rootSaga from "./sagas";
 
 const logger = createLogger();
 const saga = createSagaMiddleware();
-const store = createStore(
-  ContactReducer,
-  undefined,
-  applyMiddleware(saga, logger)
-);
+const store = createStore(ContactReducer, applyMiddleware(saga, logger));
 
 saga.run(rootSaga);
 export default store;

@@ -12,7 +12,6 @@ const deleteContact = (state, action) => {
 };
 
 const addContacts = action => {
-  console.log(action.contacts);
   return [...action.contacts];
 };
 
